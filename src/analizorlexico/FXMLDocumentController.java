@@ -65,7 +65,7 @@ public class FXMLDocumentController implements Initializable {
         AllLines al = new AllLines(entrada.getText());
         File fichero = new File("fichero.txt");
         PrintWriter writer;
-        
+        resultado.setText("");
         try{
             System.out.println("numero de lineas*******" + al.getLines());
             String[] x = al.AllLines(al.getLines());
