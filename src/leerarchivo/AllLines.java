@@ -15,7 +15,7 @@ public class AllLines{
 	
 
 	public static String [] AllLines(int numlines){
-
+            System.out.println("numero de lineas---" + numlines);
 		try{
 		  datos = new String [numlines];
           int c = 0;
@@ -25,6 +25,7 @@ public class AllLines{
 
           while((bfread = br.readLine()) != null){
               datos[c] = bfread;
+              System.out.println("datos----" + datos[c]);
               c++;
           }
       }catch(java.io.IOException ioex){
@@ -47,11 +48,13 @@ public class AllLines{
     try{ 
       fr = new FileReader(name); // Creamos el objeto de la clase FileReader
       br = new BufferedReader(fr); // Creamos el objeto de la clase BufferedReader
+        
       while((cadena=br.readLine()) != null){ //Un ciclo que nos leerá cada una de las lineas de nuestro archivo hasta que ya no haya nada.
            cont=cont+1; //nos lleva el conteo de las lineas
       }
 
     }catch(Exception e){ 
+        System.out.println("excepcion---" + e);
       cont = -1; //en dado caso de que no pueda leer el archivo o que surja algun error en el bloque del try asignrá a contador el valor negativo de -1 
     }
     finally{ 

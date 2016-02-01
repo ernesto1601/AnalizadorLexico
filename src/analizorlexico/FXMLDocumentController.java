@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import leerarchivo.AllLines;
 
 /**
  *
@@ -40,7 +41,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-         String path = "C:/Users/Ernesto/Documents/Escuela/Cuatrimestre 5/Lengujes y Automatas/AnalizorLexico/src/analizorlexico//Lexer.flex";
+         String path = "C:/Users/Andres/Documents/NetBeansProjects/AnalizadorLexico/src/analizorlexico//Lexer.flex";
         generarLexer(path);
     }  
     
@@ -61,12 +62,17 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void probarLexerFile() throws IOException{
-        
+        AllLines al = new AllLines(entrada.getText());
         File fichero = new File("fichero.txt");
         PrintWriter writer;
+        
         try{
+            System.out.println("numero de lineas*******" + al.getLines());
+            String[] x = al.AllLines(al.getLines());
             writer = new PrintWriter(fichero);
-            writer.print(entrada.getText());
+            for (int i = 0; i < al.getLines(); i++) {
+                writer.append(x[i]);
+            }
             writer.close();
         }
         catch(FileNotFoundException ex){
