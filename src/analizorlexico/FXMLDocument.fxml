@@ -10,7 +10,7 @@
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <TextField fx:id="entrada" layoutX="168.0" layoutY="54.0" prefHeight="39.0" prefWidth="399.0" />
-      <Label layoutX="53.0" layoutY="60.0" text="Operación" />
+      <Label layoutX="53.0" layoutY="60.0" text="Archivo a evaluar" />
       <Button fx:id="btn_evaluar" layoutX="307.0" layoutY="114.0" mnemonicParsing="false" onAction="#accion" text="Evaluar" />
       <Label layoutX="39.0" layoutY="140.0" text="Resultado:" />
       <TextArea fx:id="resultado" layoutX="47.0" layoutY="180.0" prefHeight="200.0" prefWidth="519.0" />
