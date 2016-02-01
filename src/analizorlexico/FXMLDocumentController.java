@@ -41,7 +41,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-         String path = "C:/Users/Andres/Documents/NetBeansProjects/AnalizadorLexico/src/analizorlexico//Lexer.flex";
+         String path = "../AnalizadorLexico/src/analizorlexico//Lexer.flex";
         generarLexer(path);
     }  
     
