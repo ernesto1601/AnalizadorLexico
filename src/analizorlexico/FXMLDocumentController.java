@@ -34,6 +34,7 @@ public class FXMLDocumentController implements Initializable {
     TextArea resultado;
     @FXML
     TextField entrada;
+    
    
     
     @Override
