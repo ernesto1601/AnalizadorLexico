@@ -12,5 +12,5 @@ package analizorlexico;
 public enum Token {
     
     igual,suma,multiplicacion,division, ERROR, resta,Identificador, Entero,Palabra_Reservada,comentario,
-    LLA,LLC,num_decimal,PA,PC,punt_coma;
+    LLA,LLC,num_decimal,PA,PC,punt_coma,EQUAL;
 }

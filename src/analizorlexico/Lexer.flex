@@ -32,6 +32,7 @@ white=[ \n]
 "/" {return division;}
 "{" {return LLA;}
 "}" {return LLC;}
+[=][=] {lexeme=yytext(); return EQUAL;}
 "(" {return PA;}
 ")" {return PC;}
 ";" {return punt_coma;}
